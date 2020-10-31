@@ -23,7 +23,11 @@
 
   <div class="row">
     <div class="col-xs-6 col-xs-offset-6">
-      <h5 class="text=primary"><strong><%= joke %></strong></h5>
+      <% if (joke) { %>
+      <h5 class="text=primary"><strong><%= joke.value %></strong></h5>
+      <% } else { %>
+      <h5 class="text=primary">Click the button for a random joke!</h5>
+      <% } %>
     </div>
   </div>
 
